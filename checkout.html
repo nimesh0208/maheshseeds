@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Checkout — Mahesh Seeds &amp; Fertilizers</title>
+  <meta name="description" content="Delivery details bharein aur COD ya UPI-on-delivery se order confirm karein. Safe checkout, koi card detail nahi maangi jaati.">
+  <meta name="theme-color" content="#0b3d21">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Seedha content par jaayein</a>
+
+  <div class="topbar">
+    <div class="wrap">
+      <p><span aria-hidden="true">🚚</span> ₹999 se upar free delivery · 2–5 din me aapke khet tak</p>
+      <div class="topbar-links">
+        <a href="tel:+919876543210">📞 +91 98765 43210</a>
+        <a href="contact.html">Madad chahiye?</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu kholen ya band karein">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.svg" alt="" width="44" height="44">
+        <span class="brand-text">
+          <strong>Mahesh Seeds</strong>
+          <small>&amp; Fertilizers</small>
+        </span>
+      </a>
+
+      <form class="header-search" role="search" action="shop.html" method="get">
+        <label class="sr-only" for="site-search">Products search karein</label>
+        <input id="site-search" type="search" name="q" placeholder="Beej, khad, dawa search karein…" maxlength="60" autocomplete="off">
+        <button type="submit" aria-label="Search karein">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path>
+          </svg>
+        </button>
+      </form>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="shop.html">Shop</a>
+        <a href="shop.html?category=seeds">Seeds</a>
+        <a href="shop.html?category=fertilizers">Fertilizers</a>
+        <a href="shop.html?category=pesticides">Pesticides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cart-btn" href="cart.html" aria-label="Cart dekhein, 0 items">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path>
+          <circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle>
+        </svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="wrap">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li aria-current="page">Checkout</li>
+        </ol>
+        <h1>Order confirm karein</h1>
+        <p>Delivery details bharein. Order place karne ke baad humari team phone par confirm karegi — koi advance payment zaroori nahi.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <ol class="checkout-steps" aria-label="Checkout steps">
+          <li class="done"><span class="n" aria-hidden="true">1</span> Cart</li>
+          <li class="active" aria-current="step"><span class="n" aria-hidden="true">2</span> Delivery &amp; payment</li>
+          <li><span class="n" aria-hidden="true">3</span> Confirmation</li>
+        </ol>
+
+        <div class="checkout-layout" id="checkout-layout">
+          <form class="checkout-form" id="checkout-form" novalidate autocomplete="on">
+            <div class="panel">
+              <h2>Delivery details</h2>
+              <p class="muted">Phone number sahi likhein — delivery se pehle call aayegi. Fields par <span class="req">*</span> zaroori hain.</p>
+
+              <p class="form-msg err" id="form-status" role="alert" hidden></p>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fullName">Poora naam <span class="req" aria-hidden="true">*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="60" required aria-describedby="err-fullName">
+                  <p class="err" id="err-fullName"></p>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Mobile number <span class="req" aria-hidden="true">*</span></label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="98765 43210" required aria-describedby="err-phone">
+                  <p class="err" id="err-phone"></p>
+                </div>
+
+                <div class="field">
+                  <label for="email">Email <span class="muted">(optional)</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="aapka@email.com" aria-describedby="err-email">
+                  <p class="err" id="err-email"></p>
+                </div>
+
+                <div class="field">
+                  <label for="pincode">PIN code <span class="req" aria-hidden="true">*</span></label>
+                  <input id="pincode" name="pincode" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="6" placeholder="473551" required aria-describedby="err-pincode">
+                  <p class="err" id="err-pincode"></p>
+                </div>
+
+                <div class="field full">
+                  <label for="address">Ghar / gaon ka address <span class="req" aria-hidden="true">*</span></label>
+                  <input id="address" name="address" type="text" autocomplete="street-address" maxlength="180" placeholder="Ghar number, gaon / mohalla, post office" required aria-describedby="err-address">
+                  <p class="help">Landmark likhne se delivery aasan hoti hai.</p>
+                  <p class="err" id="err-address"></p>
+                </div>
+
+                <div class="field">
+                  <label for="city">City / Tehsil <span class="req" aria-hidden="true">*</span></label>
+                  <input id="city" name="city" type="text" autocomplete="address-level2" maxlength="40" required aria-describedby="err-city">
+                  <p class="err" id="err-city"></p>
+                </div>
+
+                <div class="field">
+                  <label for="state">State <span class="req" aria-hidden="true">*</span></label>
+                  <select id="state" name="state" autocomplete="address-level1" required aria-describedby="err-state">
+                    <option value="">State chunein</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                  </select>
+                  <p class="err" id="err-state"></p>
+                </div>
+
+                <div class="field full">
+                  <label for="notes">Order note <span class="muted">(optional)</span></label>
+                  <textarea id="notes" name="notes" maxlength="200" placeholder="Jaise: subah 9 baje se pehle delivery, ya kisi khaas product ke baare me baat karni hai"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h2>Payment method</h2>
+              <p class="muted">Abhi sirf delivery ke waqt payment available hai. Koi card / UPI PIN is page par nahi maanga jaata.</p>
+
+              <div class="pay-options">
+                <label class="pay-option">
+                  <input type="radio" name="payment" value="cod" checked>
+                  <span>
+                    <strong>Cash on Delivery (+₹30)</strong>
+                    <span>Product haath me lekar cash pay karein. ₹30 COD handling fee lagti hai.</span>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="payment" value="upi">
+                  <span>
+                    <strong>UPI on delivery</strong>
+                    <span>Delivery ke waqt delivery partner ke UPI se pay karein. Koi extra fee nahi.</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="check-row mt-18">
+                <input id="terms" name="terms" type="checkbox" aria-describedby="err-terms">
+                <label for="terms">
+                  Main <a href="policies.html#terms" target="_blank" rel="noopener noreferrer">terms of use</a> aur
+                  <a href="policies.html#returns" target="_blank" rel="noopener noreferrer">return policy</a> se sehmat hoon.
+                </label>
+              </div>
+              <p class="err" id="err-terms"></p>
+
+              <button class="btn btn-primary btn-lg btn-block" type="submit" id="place-order">Order confirm karein</button>
+              <p class="pay-note">Order place karke aap ko WhatsApp par confirmation bhejne ka option milega.</p>
+            </div>
+          </form>
+
+          <aside class="summary" id="checkout-summary" aria-label="Order summary">
+            <p class="loading-note">Summary load ho rahi hai…</p>
+          </aside>
+        </div>
+
+        <div id="checkout-empty" hidden>
+          <div class="empty-state">
+            <div class="big" aria-hidden="true">🛒</div>
+            <h2>Checkout ke liye cart khaali hai</h2>
+            <p>Pehle products add karein, phir yahan aakar delivery details bharein.</p>
+            <a class="btn btn-primary" href="shop.html">Shop par jaayein</a>
+          </div>
+        </div>
+
+        <div id="checkout-success" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/logo.svg" alt="" width="42" height="42">
+          <div><strong>Mahesh Seeds</strong><span>&amp; Fertilizers</span></div>
+        </div>
+        <p>Certified beej, khad, dawa aur kheti ke auzaar — 2014 se kisanon ki seva me. Original products, sahi price aur seedhi salah.</p>
+        <div class="pay-badges">
+          <span>COD</span><span>UPI on delivery</span><span>7-day replacement</span>
+        </div>
+      </div>
+
+      <div>
+        <h3>Shop</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html">Saare products</a></li>
+          <li><a href="shop.html?category=seeds">Seeds / Beej</a></li>
+          <li><a href="shop.html?category=fertilizers">Fertilizers / Khad</a></li>
+          <li><a href="shop.html?category=pesticides">Pesticides / Dawa</a></li>
+          <li><a href="shop.html?category=tools">Tools / Auzaar</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Help</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Hamare baare me</a></li>
+          <li><a href="contact.html">Contact karein</a></li>
+          <li><a href="policies.html#shipping">Shipping &amp; delivery</a></li>
+          <li><a href="policies.html#returns">Return policy</a></li>
+          <li><a href="policies.html#privacy">Privacy policy</a></li>
+          <li><a href="policies.html#terms">Terms of use</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-contact">
+          <li><span aria-hidden="true">📍</span><span>Main Bazar Road, Shivpuri,<br>Madhya Pradesh 473551</span></li>
+          <li><span aria-hidden="true">📞</span><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><span aria-hidden="true">✉️</span><a href="mailto:order@maheshseeds.in">order@maheshseeds.in</a></li>
+          <li><span aria-hidden="true">🕗</span><span>Somvaar–Shanivaar, 8:00 AM – 7:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Mahesh Seeds &amp; Fertilizers. All rights reserved.</p>
+      <p>Kisan ke liye, kisan ke saath. 🌱</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/919876543210?text=Namaste%20Mahesh%20Seeds%20%26%20Fertilizers!%20Mujhe%20order%20karna%20hai." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp par order karein">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.4 15.2L2 22l4.9-1.6A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"></path></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="js/utils.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>
